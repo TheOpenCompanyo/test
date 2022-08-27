@@ -88,19 +88,19 @@
             }
         },
         
-        _modNameToUri: function(modName) {
-            if (modName.indexOf('/') !== -1) {
-                return modName;
-            }
-            var parts = modName.replace(/_/g, '.').split('.');
-            var root = parts.shift();
-            var uriPrefix = paths[root];
-            if (!uriPrefix) {
-                uriPrefix = './' + root + '/';
-                // console.warn('Not sure where to fetch ' + root + ' modules from! Attempting ' + uriPrefix + '...');
-            }
-            return [uriPrefix, parts.join('/'), '/lib.js'].join('');
-        },
+//         _modNameToUri: function(modName) {
+//             if (modName.indexOf('/') !== -1) {
+//                 return modName;
+//             }
+//             var parts = modName.replace(/_/g, '.').split('.');
+//             var root = parts.shift();
+//             var uriPrefix = paths[root];
+//             if (!uriPrefix) {
+//                 uriPrefix = './' + root + '/';
+//                 // console.warn('Not sure where to fetch ' + root + ' modules from! Attempting ' + uriPrefix + '...');
+//             }
+//             return [uriPrefix, parts.join('/'), '/lib.js'].join('');
+//         },
 
         /**
          * Get the full path of a module.
